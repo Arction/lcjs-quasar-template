@@ -47,14 +47,22 @@
       <q-slider v-model="count" :min="min" :max="max" />
     </div>
     <div>
-      <Chart />
+      <!--
+        q-no-ssr is important to have. Otherwise charts might be tried to render on server side which is not wanted behavior in most cases.
+        See @arction/lcjs-headless npm package if server side rendering would be preferred.
+      -->
+      <q-no-ssr>
+        <Chart1 />
+        <Chart2 />
+      </q-no-ssr>
     </div>
   </q-page>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-import Chart from '../components/Chart.vue';
+import Chart1 from '../components/Chart-component.vue';
+import Chart2 from '../components/Chart-script-setup.vue';
 
 const count = ref(0);
 
