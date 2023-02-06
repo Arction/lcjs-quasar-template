@@ -48,7 +48,7 @@ export default {
       .Dashboard({
         numberOfColumns: 2,
         numberOfRows: 1,
-        theme: Themes.lightNew,
+        theme: Themes.light,
         container: this.$refs.el,
       })
       .setColumnWidth(0, 1.0)

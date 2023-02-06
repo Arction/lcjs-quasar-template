@@ -34,7 +34,7 @@ onMounted(() => {
     .Dashboard({
       numberOfColumns: 2,
       numberOfRows: 1,
-      theme: Themes.lightNew,
+      theme: Themes.light,
       container: el.value,
     })
     .setColumnWidth(0, 1.0)
